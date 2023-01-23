@@ -1,0 +1,65 @@
+.sidebar {
+    padding: 1rem;
+    width: fit-content;
+    padding-left: $base-padding;
+    box-shadow: $base-box-shadow;
+
+    &--title {
+        font-size: $font-size-xl;
+    }
+
+    &--description {
+        font-size: $font-size-sm;
+        color: mix(white, black, 50%);
+    }
+
+    &--items {
+    list-style: none;
+    padding: calc($base-padding * 0.5) 0px 0px calc($base-padding * 2);
+    margin: 0px;
+    text-decoration: none;
+
+    &--item {
+        width: 100%;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+            &::before {
+                display: block;
+            }
+        }
+
+        &::before {
+            display: none;
+            content: "🔗";
+            transform: translate(-100%,-0%);
+            position: absolute;
+        }
+
+        @each $key, $value in $colors {
+            &--hover--#{$key} {
+                &:hover {
+                    color: $value;
+                }
+            }
+
+            @for $i from 1 through 9 {
+                &--hover--#{$key}--light--#{$i} {
+                    &:hover {
+                        color: mix(white, $value, $i * 10%);
+                    }
+                }
+            }
+
+            @for $i from 1 through 9 {
+                &--hover--#{$key}--dark--#{$i} {
+                    &:hover {
+                        color: mix(black, $value, $i * 10%);
+                    }
+                }
+            }
+        }
+    }
+}
+}
