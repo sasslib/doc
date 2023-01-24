@@ -36,30 +36,6 @@
             transform: translate(-100%,-0%);
             position: absolute;
         }
-
-        @each $key, $value in $colors {
-            &--hover--#{$key} {
-                &:hover {
-                    color: $value;
-                }
-            }
-
-            @for $i from 1 through 9 {
-                &--hover--#{$key}--light--#{$i} {
-                    &:hover {
-                        color: mix(white, $value, $i * 10%);
-                    }
-                }
-            }
-
-            @for $i from 1 through 9 {
-                &--hover--#{$key}--dark--#{$i} {
-                    &:hover {
-                        color: mix(black, $value, $i * 10%);
-                    }
-                }
-            }
-        }
     }
 }
 }
