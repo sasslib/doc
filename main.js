@@ -1,1 +1,1 @@
-import './sasslib/style.scss';
+import 'shinobie';
