@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="create sass lib">
+    <meta name="description" content="create sass lib" />
     <title>sass lib doc</title>
   </head>
   <body class="h--screen">
@@ -12,19 +12,120 @@
       <div class="container">
         <h2 class="site--title">Shinobi CSS doc</h2>
         <ul class="items">
-          <li class="item">github</li>
+          <li class="item">
+            <a href="https://github.com/jokay03J-V2/sasslib/">github</a>
+          </li>
         </ul>
       </div>
     </nav>
-    <aside class="sidebar">
-      <h2 class="sidebar--title">shinobie doc</h2>
-      <p class="sidebar--description">documentation de shinobie</p>
-      <ul class="sidebar--items">
-        <li class="sidebar--items--item text--hover--orange"><a href="#font-size">font-size</a></li>
-        <li class="sidebar--items--item"><a href="#colors">colors</a></li>
-        <li class="sidebar--items--item"><a href="#card">card</a></li>
-      </ul>
-    </aside>
+    <main class="d--flex py--2 w--6-6">
+      <aside class="sidebar w--3-12 ml--2">
+        <h2 class="sidebar--title">shinobie doc</h2>
+        <p class="sidebar--description">documentation de shinobie</p>
+        <ul class="sidebar--items">
+          <li class="sidebar--items--item"><a href="#colors">colors</a></li>
+          <li class="sidebar--items--item"><a href="#cards">cards</a></li>
+          <li class="sidebar--items--item"><a href="#buttons">buttons</a></li>
+        </ul>
+      </aside>
+      <div class="content mx--2 w--4-6">
+        <article class="card" id="colors">
+          <h2 class="card--title">Colors</h2>
+          <p class="text--gray ml--1">
+            Voici la liste de toute les couleurs possibles.
+          </p>
+          <ul class="ml--2 mb--1 w--1-6">
+            <li class="text--orange">orange</li>
+            <li class="text--purple">purple</li>
+            <li class="text--black">black</li>
+            <li class="text--primary">primary</li>
+            <li class="text--secondary">secondary</li>
+            <li class="text--info">info</li>
+            <li class="text--error">error</li>
+            <li class="text--blue">blue</li>
+            <li class="text--yellow">yellow</li>
+            <li class="text--green">green</li>
+            <li class="text--gray">gray</li>
+            <li class="text--white bg--black">white</li>
+          </ul>
+          <p>
+            Pour utiliser une couleur, vous devez utiliser
+            [text|bg]--[hover(?)]--[couleur]
+          </p>
+          <pre><code class="language-html h--1-12">
+          &lt;p class="text--orange bg--black text--hover--green"&gt;text en orange&lt;/p&gt;
+        </code></pre>
+          <p class="text--orange text--hover--green bg--black my--1">
+            text en orange, hover en vert et fond en noir.
+          </p>
+          <p>text--[couleur], mes une couleur sur un text.</p>
+          <p>text--hover--[couleur], mes la couleur du hover sur un text.</p>
+          <p>bg--[couleur], mes la couleur du fond.</p>
+        </article>
+        <article class="card" id="cards">
+          <h2 class="card--title">Card</h2>
+          <div class="card w--2-6">
+            <h2 class="card--title">card title</h2>
+            <p class="card--body">card body</p>
+          </div>
+          <p>card title | <code>card--title</code></p>
+          <p>card body | <code>card--body</code></p>
+        </article>
+        <article class="card" id="buttons">
+          <h2 class="card--title">Buttons</h2>
+          <p class="mb--1">
+            Vous pouvez utiliser toute les couleurs disponible sur les boutons
+          </p>
+          <button class="btn">default</button>
+          <button class="btn-primary">primary</button>
+          <button class="btn-secondary">secondary</button>
+          <button class="btn-orange">orange</button>
+          <pre><code class="language-html h--1-12">
+            &lt;button class="btn"&gt;default btn&lt;/button&gt;
+          </code></pre>
+          <pre><code class="language-html h--1-12">
+            &lt;button class="btn-orange"&gt;orange btn&lt;/button&gt;
+          </code></pre>
+        </article>
+        <article id="grid" class="card">
+          <h2 class="card--title">Grid System</h2>
+          <div class="row gap-2 justify--center">
+            <div class="col-12-xs col-5-sm col-3-xl">
+              <div class="card">
+                <h3 class="card-title">Hello, ninjas</h3>
+                <p class="card-body">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+            <div class="col-12-xs col-5-sm col-3-xl">
+              <div class="card">
+                <h3 class="card-title">Hello, ninjas</h3>
+                <p class="card-body">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+            <div class="col-12-xs col-5-sm col-3-xl">
+              <div class="card">
+                <h3 class="card-title">Hello, ninjas</h3>
+                <p class="card-body">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+            <div class="col-12-xs col-5-sm col-3-xl">
+              <div class="card">
+                <h3 class="card-title">Hello, ninjas</h3>
+                <p class="card-body">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
     <script src="./main.js" type="module"></script>
   </body>
 </html>

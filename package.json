@@ -12,6 +12,7 @@
     "vite": "^4.0.0"
   },
   "dependencies": {
-    "shinobie": "^1.0.6"
+    "highlight.js": "^11.7.0",
+    "shinobie": "^1.0.7"
   }
 }
