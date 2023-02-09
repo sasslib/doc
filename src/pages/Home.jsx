@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Section from "../components/Section";
-import sdk from "@stackblitz/sdk";
 import CodeSandBoxPreview from "../components/CodeSandboxPreview";
 
 export default function Home() {
