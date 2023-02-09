@@ -20,7 +20,7 @@ export default function Home() {
             href: `${import.meta.env.VITE_PUBLIC_BASE_URL}/components`,
           },
         ]}
-      ></Navbar>
+      />
       <div
         className="py--1 px--1 d--flex f--direction--column"
         style={{ gap: 15 }}
