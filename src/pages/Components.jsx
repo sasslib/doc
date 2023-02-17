@@ -1,7 +1,9 @@
+import { Sandpack } from "@codesandbox/sandpack-react";
 import React from "react";
 import CodeSandBoxPreview from "../components/CodeSandboxPreview";
 import Navbar from "../components/Navbar";
 import Section from "../components/Section";
+import { NavbarCodeExemple } from "../utils/exemplecode";
 
 export default function Components() {
   return (
@@ -31,12 +33,25 @@ export default function Components() {
               Vous pouvez mettre toute les couleurs disponible comme fond.
             </p>
             <code>navbar--[couleur]</code>
-            <CodeSandBoxPreview
-              url={
-                "https://codesandbox.io/embed/navbar-sasslib-m7slqo?fontsize=14&hidenavigation=1&theme=dark"
-              }
-              className="h--10 mt--1"
-            ></CodeSandBoxPreview>
+            <Sandpack
+              customSetup={{ dependencies: { shinobie: "^1.0.10" } }}
+              options={{
+                showNavigator: true,
+                showLineNumbers: true,
+                showTabs: true,
+              }}
+              files={{
+                "index.html": NavbarCodeExemple,
+                "package.json": `
+                {
+                  "entry": "index.html",
+                  "dependencies": {
+                    "shinobie": "^1.0.10"
+                  }
+              }`,
+                "index.js": `import "shinobie"`,
+              }}
+            />
           </Section>
         </Section>
       </div>

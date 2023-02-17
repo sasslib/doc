@@ -2,7 +2,15 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Section from "../components/Section";
 import CodeSandBoxPreview from "../components/CodeSandboxPreview";
-
+import { Sandpack } from "@codesandbox/sandpack-react";
+import {
+  BorderExemple,
+  ButtonExemple,
+  CardExemple,
+  ColorsExemple,
+  GridSystemExemple,
+  WidthHeightExemple,
+} from "../utils/exemplecode";
 export default function Home() {
   return (
     <>
@@ -46,12 +54,25 @@ export default function Home() {
             Pour utiliser une couleur, vous devez utiliser
             [text|bg]--[hover(?)]--[couleur]
           </p>
-          <CodeSandBoxPreview
-            url={
-              "https://codesandbox.io/embed/elegant-lamarr-1ces1o?fontsize=14&hidenavigation=1&theme=dark"
-            }
-            className="h--10"
-          ></CodeSandBoxPreview>
+          <Sandpack
+            customSetup={{ dependencies: { shinobie: "^1.0.10" } }}
+            options={{
+              showNavigator: true,
+              showLineNumbers: true,
+              showTabs: true,
+            }}
+            files={{
+              "index.html": ColorsExemple,
+              "package.json": `
+              {
+                "entry": "index.html",
+                "dependencies": {
+                  "shinobie": "^1.0.10"
+                }
+            }`,
+              "index.js": `import "shinobie"`,
+            }}
+          />
         </Section>
         <Section title={"Card"}>
           <p>
@@ -60,32 +81,71 @@ export default function Home() {
           <p>
             card body | <code>card--body</code>
           </p>
-          <CodeSandBoxPreview
-            url={
-              "https://codesandbox.io/embed/card-sasslib-e32gl0?fontsize=14&hidenavigation=1&theme=dark"
-            }
-            className="h--10 mt--1"
-          ></CodeSandBoxPreview>
+          <Sandpack
+            customSetup={{ dependencies: { shinobie: "^1.0.10" } }}
+            options={{
+              showNavigator: true,
+              showLineNumbers: true,
+              showTabs: true,
+            }}
+            files={{
+              "index.html": CardExemple,
+              "package.json": `
+              {
+                "entry": "index.html",
+                "dependencies": {
+                  "shinobie": "^1.0.10"
+                }
+            }`,
+              "index.js": `import "shinobie"`,
+            }}
+          />
         </Section>
         <Section title={"Buttons"}>
           <p class="mb--1">
             Vous pouvez utiliser toute les couleurs disponible sur les boutons
           </p>
-          <CodeSandBoxPreview
-            url={
-              "https://codesandbox.io/embed/buttons-sasslib-ydwpkr?fontsize=14&hidenavigation=1&theme=dark"
-            }
-            className="h--10"
-          ></CodeSandBoxPreview>
+          <Sandpack
+            customSetup={{ dependencies: { shinobie: "^1.0.10" } }}
+            options={{
+              showNavigator: true,
+              showLineNumbers: true,
+              showTabs: true,
+            }}
+            files={{
+              "index.html": ButtonExemple,
+              "package.json": `
+              {
+                "entry": "index.html",
+                "dependencies": {
+                  "shinobie": "^1.0.10"
+                }
+            }`,
+              "index.js": `import "shinobie"`,
+            }}
+          />
         </Section>
         <Section title={"Grid System"}>
           <p>Pour chaque item vous pouvez utiliser col-[number]-[breakpoint]</p>
-          <CodeSandBoxPreview
-            url={
-              "https://codesandbox.io/embed/grid-system-sasslib-3jlpn4?fontsize=14&hidenavigation=1&theme=dark"
-            }
-            className="h--10 mt--1"
-          ></CodeSandBoxPreview>
+          <Sandpack
+            customSetup={{ dependencies: { shinobie: "^1.0.10" } }}
+            options={{
+              showNavigator: true,
+              showLineNumbers: true,
+              showTabs: true,
+            }}
+            files={{
+              "index.html": GridSystemExemple,
+              "package.json": `
+              {
+                "entry": "index.html",
+                "dependencies": {
+                  "shinobie": "^1.0.10"
+                }
+            }`,
+              "index.js": `import "shinobie"`,
+            }}
+          />
         </Section>
         <Section title={"Utilities"}>
           <Section className="border--none">
@@ -134,12 +194,25 @@ export default function Home() {
               </ul>
               <code class="my--1 pl--3">rounded--[radius]</code>
             </Section>
-            <CodeSandBoxPreview
-              url={
-                "https://codesandbox.io/embed/border-sasslib-0w2v7k?fontsize=14&hidenavigation=1&theme=dark"
-              }
-              className="h--10 mt--1"
-            ></CodeSandBoxPreview>
+            <Sandpack
+              customSetup={{ dependencies: { shinobie: "^1.0.10" } }}
+              options={{
+                showNavigator: true,
+                showLineNumbers: true,
+                showTabs: true,
+              }}
+              files={{
+                "index.html": BorderExemple,
+                "package.json": `
+              {
+                "entry": "index.html",
+                "dependencies": {
+                  "shinobie": "^1.0.10"
+                }
+            }`,
+                "index.js": `import "shinobie"`,
+              }}
+            />
           </Section>
           <Section title={"Margin"} titleAs={"h3"} className="border--none">
             <Section
@@ -309,12 +382,25 @@ export default function Home() {
                 <code>h--[1--99]</code>
               </Section>
             </Section>
-            <CodeSandBoxPreview
-              url={
-                "https://codesandbox.io/embed/height-width-sasslib-qcv8xh?fontsize=14&hidenavigation=1&theme=dark"
-              }
-              className="h--10"
-            ></CodeSandBoxPreview>
+            <Sandpack
+              customSetup={{ dependencies: { shinobie: "^1.0.10" } }}
+              options={{
+                showNavigator: true,
+                showLineNumbers: true,
+                showTabs: true,
+              }}
+              files={{
+                "index.html": WidthHeightExemple,
+                "package.json": `
+              {
+                "entry": "index.html",
+                "dependencies": {
+                  "shinobie": "^1.0.10"
+                }
+            }`,
+                "index.js": `import "shinobie"`,
+              }}
+            />
           </Section>
         </Section>
       </div>
