@@ -1,28 +1,23 @@
 import React from "react";
+import { Navbar as NavbarSasslib } from "@jokay03j-v2/react-sasslib";
+import { MdMenu } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-export default function Navbar({ title, items = [] }) {
+export default function Navbar() {
   return (
-    <nav className="navbar--red text--white mb-4">
-      <div className="container">
-        <h2 className="site--title">{title}</h2>
-        <label className="navbar--mobile--btn" htmlFor="navbar--input">
-          Menu
-        </label>
-        <input
-          type="checkbox"
-          name="navbar--input"
-          id="navbar--input"
-          className="navbar--mobile--checked"
-        />
-        <ul className="items">
-          {items.map((item, index) => (
-            <li className="item" key={index}>
-              <Link to={item.href}>{item.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
+    <>
+      <NavbarSasslib
+        menuBtnChildren={<MdMenu className="h--1 w--1"></MdMenu>}
+        navbarTitle="sasslib"
+        color="red"
+        className="text--white"
+      >
+        <NavbarSasslib.Item>
+          <Link to={"/sasslib/"} className="text--black md--text--white">
+            Accueil
+          </Link>
+        </NavbarSasslib.Item>
+      </NavbarSasslib>
+    </>
   );
 }
