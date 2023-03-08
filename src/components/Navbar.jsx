@@ -13,7 +13,7 @@ export default function Navbar() {
         className="text--white"
       >
         <NavbarSasslib.Item>
-          <Link to={"/sasslib/"} className="text--black md--text--white">
+          <Link to={"/docs/"} className="text--black md--text--white">
             Accueil
           </Link>
         </NavbarSasslib.Item>
