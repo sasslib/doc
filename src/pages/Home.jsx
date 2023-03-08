@@ -59,7 +59,7 @@ export default function Home() {
               style={{ flexWrap: "wrap" }}
             >
               <Link
-                to="/sasslib/references/base"
+                to="/docs/references/base"
                 style={{ textDecoration: "none" }}
                 className="col--5--xs col--5--sm col--5--xl"
               >
@@ -71,7 +71,7 @@ export default function Home() {
                 </div>
               </Link>
               <Link
-                to="/sasslib/references/colors"
+                to="/docs/references/colors"
                 style={{ textDecoration: "none" }}
                 className="col--5--xs col--5--sm col--5--xl"
               >
@@ -83,7 +83,7 @@ export default function Home() {
                 </div>
               </Link>
               <Link
-                to="/sasslib/references/flexbox"
+                to="/docs/references/flexbox"
                 style={{ textDecoration: "none" }}
                 className="col--5--xs col--5--sm col--5--xl"
               >
@@ -95,7 +95,7 @@ export default function Home() {
                 </div>
               </Link>
               <Link
-                to="/sasslib/references/padding&margin"
+                to="/docs/references/padding&margin"
                 style={{ textDecoration: "none" }}
                 className="col--5--xs col--5--sm col--5--xl"
               >
@@ -107,7 +107,7 @@ export default function Home() {
                 </div>
               </Link>
               <Link
-                to="/sasslib/references/height&width"
+                to="/docs/references/height&width"
                 style={{ textDecoration: "none" }}
                 className="col--5--xs col--5--sm col--5--xl"
               >
@@ -119,7 +119,7 @@ export default function Home() {
                 </div>
               </Link>
               <Link
-                to="/sasslib/references/components"
+                to="/docs/references/components"
                 style={{ textDecoration: "none" }}
                 className="col--5--xs col--5--sm col--5--xl"
               >
@@ -131,7 +131,7 @@ export default function Home() {
                 </div>
               </Link>
               <Link
-                to="/sasslib/references/borders"
+                to="/docs/references/borders"
                 style={{ textDecoration: "none" }}
                 className="col--5--xs col--5--sm col--5--xl"
               >
