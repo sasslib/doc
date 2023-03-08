@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "sasslib-doc",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,13 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@codesandbox/sandpack-react": "^2.0.6",
+    "@codesandbox/sandpack-react": "^2.1.2",
+    "@jokay03j-v2/react-sasslib": "^1.0.1",
+    "@jokay03j-v2/sasslib": "^1.1.5",
     "highlight.js": "^11.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-highlight": "^0.15.0",
-    "react-router-dom": "^6.8.1",
-    "shinobie": "^1.0.10"
+    "react-icons": "^4.8.0",
+    "react-router-dom": "^6.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
