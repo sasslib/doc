@@ -8,7 +8,7 @@ export const NavbarCodeExemple = `<nav class="navbar--red text--white mb-4">
             id="navbar--input"
             class="navbar--mobile--checked"
         />
-        <ul class="items">
+        <ul class="items text--black md--text--white bg--white">
             <li class="item">Home</li>
             <li class="item">Getting Started</li>
             <li class="item">Components</li>
@@ -85,7 +85,7 @@ export const WidthHeightExemple = `<div class="bg--red w--3-6">50% width</div>
 export const packageExemple = `              {
                 "entry": "index.html",
                 "dependency": {
-                  "@jokay03j-v2/sasslib": "^1.1.5"
+                  "@jokay03j-v2/sasslib": "^1.1.7"
                 }
             }`;
 
